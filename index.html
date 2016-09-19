@@ -99,6 +99,79 @@
         </div>
         </div>
     </div>
+    
+    
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Reserve a Table </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" id="reserve">
+                        <div class="form-group">
+                            <label for="optradio" class="control-label col-xs-3">Number of Guests</label>
+                            <div class="col-xs-9">
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" id="optradio">1
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" id="optradio" >2
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" id="optradio">3
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" id="optradio">4
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" id="optradio">5
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" id="optradio">6
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3" for="optSmoking">Section</label>
+                            <div class="btn-group col-xs-9" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="optSmoking" id="optSmoking">Non-Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                    <input type="radio" name="optSmoking" id="optSmoking">Smoking
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-xs-3 control-label" for="inputDate">Date and Time</label>
+                            <div class="col-xs-5">
+                                <input type="date" class="form-control" id="inputDate">
+                                <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="time" class="form-control" id="inputTime">
+                                <span class="glyphicon glyphicon-time form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-sm-offset-4">
+                            <button type="submit" class="btn btn-primary">Reserve</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                    <p style="padding:20px"/>
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Warning:</strong> Please <a href="tel:+852 1234 5678" class="alert-link">call</a> us to reserve for more than six quests.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
 
     <header class="jumbotron">
 
@@ -117,8 +190,8 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:50px 20px 20px 20px;"></p>
-                    <a class="button btn-warning btn-block btn-lg" href="#reserve" role="button"
-                    data-tooggle="tooltip" title="Or Call us at +852 12345678" data-placement="button">Reserve a table</a>
+                    <a class="button btn-warning btn-block btn-lg" role="button"
+                    data-toggle="modal" data-target="#reserveModal">Reserve a table</a>
                 </div>
             </div>
         </div>
